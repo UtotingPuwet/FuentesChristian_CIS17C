@@ -1,5 +1,6 @@
 #include "Card.h"
 #include <string>
+#include <iostream>
 
 Card::Card() {
     
@@ -44,4 +45,8 @@ int Card::setVal (int n) {
         return 10;
     }
     return (n%13)+1;
+}
+
+void Card::print() {
+    std::cout << suit << " of " << face << '\n';
 }

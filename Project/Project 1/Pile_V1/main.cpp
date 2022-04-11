@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Christian Fuentes
- * Created on 4/10/2022 5:30PM
- * Purpose:  Creating card V1
+ * Created on 4/10/2022 8:00PM
+ * Purpose:  Creating Pile V1
  */
 
 //System Libraries
@@ -10,11 +10,11 @@
 #include <queue>
 #include <list>
 #include <iterator>
-#include "Card.h"
 using namespace std;
 
 //User Libraries
 #include "Deck.h"
+#include "CntPile.h"
 //Global Constants - No Global Variables
 
 //Function Prototypes
@@ -24,15 +24,14 @@ int main(int argc, char** argv) {
     //Set seed
     srand(static_cast<int>(time(NULL)));
     //Declare Variable Data Types and Constants
-    Deck deck;
-    
+    int random = rand()%52;
+    Card a;
+    a.iniCard(random);
+    CntPile pile(a);
     //Initialize Variables
-    
+    pile.place(a);
     //Process or map Inputs to Outputs
-    for (int i = 0; i < 20; i++) {
-        Card test = deck.draw();
-        cout << test.getSuit() << " of " << test.getFace() << "     " << test.getVal() << '\n';
-    }
+    pile.print();
     //Display Outputs
     
     //Exit stage right!
