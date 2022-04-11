@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Christian Fuentes
  * Created on 4/10/2022 5:30PM
- * Purpose:  Creating card V1
+ * Purpose:  Creating Deck V1
  */
 
 //System Libraries

@@ -9,6 +9,8 @@
  * Author: UtotingPuwet
  *
  * Created on April 10, 2022, 2:47 AM
+ * 
+ * on April 10,2022 11:48 PM, added a print function to card.
  */
 
 #ifndef CARD_H
@@ -32,6 +34,7 @@ public:
     std::string getFace() {return face;}
     std::string getSuit() {return suit;}
     int getVal() {return val;}
+    void print();
 };
 
 #endif /* CARD_H */
