@@ -15,6 +15,16 @@
 #define ABSPLAY_H
 
 
+class AbsPlay {
+    public:
+        bool handEmpty() = 0;
+        void playCrd() = 0;
+        void drawDck() = 0;
+        void fliPile() = 0;
+        
+    
+};
+
 
 #endif /* ABSPLAY_H */
 
