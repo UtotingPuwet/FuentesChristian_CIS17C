@@ -8,9 +8,11 @@ DrawCrd::~DrawCrd() {
     
 }
 
-void DrawCrd::init(const Deck &a) {
+void DrawCrd::init(Deck &a) {
+    Card temp;
     for (int i = 0; i < 15; i++) {
-        drawCrd.push(a.draw());
+        temp = a.draw();
+        drawCrd.push(temp);
     }
 }
 

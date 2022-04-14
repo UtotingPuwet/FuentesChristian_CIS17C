@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/CntPile.o \
 	${OBJECTDIR}/Deck.o \
 	${OBJECTDIR}/DrawCrd.o \
+	${OBJECTDIR}/FliPile.o \
 	${OBJECTDIR}/Hand.o \
 	${OBJECTDIR}/main.o
 
@@ -61,11 +62,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/players.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/players_v1.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/players.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/players_v1.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/players ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/players_v1 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Card.o: Card.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -86,6 +87,11 @@ ${OBJECTDIR}/DrawCrd.o: DrawCrd.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DrawCrd.o DrawCrd.cpp
+
+${OBJECTDIR}/FliPile.o: FliPile.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FliPile.o FliPile.cpp
 
 ${OBJECTDIR}/Hand.o: Hand.cpp
 	${MKDIR} -p ${OBJECTDIR}

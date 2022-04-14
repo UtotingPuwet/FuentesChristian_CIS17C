@@ -9,6 +9,7 @@
       <itemPath>CntPile.h</itemPath>
       <itemPath>Deck.h</itemPath>
       <itemPath>DrawCrd.h</itemPath>
+      <itemPath>FliPile.h</itemPath>
       <itemPath>Hand.h</itemPath>
       <itemPath>Players.h</itemPath>
     </logicalFolder>
@@ -23,7 +24,9 @@
       <itemPath>CntPile.cpp</itemPath>
       <itemPath>Deck.cpp</itemPath>
       <itemPath>DrawCrd.cpp</itemPath>
+      <itemPath>FliPile.cpp</itemPath>
       <itemPath>Hand.cpp</itemPath>
+      <itemPath>Players.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -66,9 +69,15 @@
       </item>
       <item path="DrawCrd.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FliPile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FliPile.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Hand.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Hand.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Players.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Players.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -113,9 +122,15 @@
       </item>
       <item path="DrawCrd.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FliPile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FliPile.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Hand.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Hand.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Players.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Players.h" ex="false" tool="3" flavor2="0">
       </item>
