@@ -15,11 +15,13 @@
 #define PLAYERS_H
 #include "AbsPlay.h"
 #include "Deck.h"
-#include "CntPile.h"
+#include "DrawCrd.h"
 #include "Hand.h"
 
 class Players : public AbsPlay{
     private:
+        DrawCrd deck;
+        Hand hand;
         
 };
 

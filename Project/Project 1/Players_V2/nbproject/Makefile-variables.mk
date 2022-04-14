@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Debug=players
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/players
+CND_ARTIFACT_NAME_Debug=players_v2
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/players_v2
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Debug=players.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/players.tar
+CND_PACKAGE_NAME_Debug=playersv2.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/playersv2.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Release=players
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/players
+CND_ARTIFACT_NAME_Release=players_v2
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/players_v2
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Release=players.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/players.tar
+CND_PACKAGE_NAME_Release=playersv2.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/playersv2.tar
 #
 # include compiler specific variables
 #

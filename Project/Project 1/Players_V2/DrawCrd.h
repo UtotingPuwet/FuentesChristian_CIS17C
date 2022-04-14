@@ -17,15 +17,16 @@
 #include "Card.h"
 #include <queue>
 
-class DrawCrd{
+class DrawCrd : private Deck{
     private:
         std::queue<Card> drawCrd; //basically another deck just more personal to the player where it will only contain the 15 drawing cards
     public:
         DrawCrd();
         ~DrawCrd();
-        void init(const Deck &);
+        void init(Deck &);
         Card draw();
         void clear();
+        bool isEmpty();
 };
 
 
