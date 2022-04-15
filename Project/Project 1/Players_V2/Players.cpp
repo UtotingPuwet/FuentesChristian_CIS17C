@@ -1,5 +1,6 @@
 #include "Players.h"
 #include <string>
+#include <iostream>
 
 Players::Players(std::string name) {
     this->name = name;
@@ -39,4 +40,8 @@ void Players::flip() {
 
 void Players::place(const Card &card) {
     this->hand.remove(card);
+}
+
+void Players::prntHnd() {
+    hand.print();
 }

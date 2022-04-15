@@ -18,6 +18,7 @@
 #include "DrawCrd.h"
 #include "Hand.h"
 #include "FliPile.h"
+#include <map>
 
 class Players : public AbsPlay{
     private:
@@ -25,6 +26,7 @@ class Players : public AbsPlay{
         Hand hand;
         FliPile pile;
         std::string name;
+        std::map<int, Card> map1;
     public:
         Players(std::string);
         ~Players();
@@ -36,6 +38,8 @@ class Players : public AbsPlay{
         bool didWin();
         bool isEmpty();
         void prntHnd();
+        Card getCard(int);
+        void choose(int);
         std::string getName() {return this->name;};
         
 };
