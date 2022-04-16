@@ -29,6 +29,8 @@ class Speed {
         bool CpuWin = false;
         bool p1Win = false;
         
+        void p1Menu(int);
+        
         
         std::multimap<std::string, int> winRate;
     public:

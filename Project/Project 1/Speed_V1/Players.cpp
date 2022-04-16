@@ -76,7 +76,7 @@ void Players::prntHnd() {
     for (; it != map1.end(); it++) {
         std::cout << it->first << ").  " << it->second << '\t';
     }
-    std::cout << " 5.) Draw from deck \t 6.) Flip from pile.";
+    std::cout << " 5.) Flip from pile.";
     std::cout << '\n';
     
     
@@ -94,7 +94,7 @@ Card Players::choose(int index) {
     
     this->place(choice);
     
-    this->draw();
+    if (!drawDek.isEmpty()) this->draw();
     
     
     return choice;
