@@ -1,5 +1,6 @@
 #include "Speed.h"
 #include <iostream>
+#include <ctime>
 
 Speed::Speed(std:: string name) {
     this->p1 = new Players(name);
@@ -25,36 +26,55 @@ void Speed::game() {
         std::cout << '\n';
         p1->prntHnd();
         std::cout << '\n';
-        std::cin>>choice;
-        switch (choice) {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-            case 4: {
-                Card temp = p1->choose(choice);
-                int centChos;
-                std::cin>>centChos;
-                if (centChos == 1) {
-                    center1.update(temp);
-                }
-                else if (centChos == 2) {
-                    center2.update(temp);
-                }
-                break;
-            }
-            case 5: p1->draw(); break;
-            case 6: {
-                center2.flipAdd(p1->flip());
-                center1.flipAdd(cpu->flip());
-                break;
+        
+        int timBeg = time(0);
+        int timEnd = time(0);
+        
+        
+        std::cin >> choice;
+        timEnd = time(0);
+        if (timEnd - timBeg > 10) {
+            std::cout << "A little slow...\n";
+            if (!cpu->choose(center1, center2)) {
+                this->p1Menu(choice);
             }
         }
-        p1->prntHnd();
+        else {
+            this->p1Menu(choice);
+        }
+        
+        
         std::cout << '\n';
         
-        p1Win = true;
+        if (p1->isEmpty()) p1Win = true;
+        if (cpu->isEmpty()) CpuWin = true;
     }
-    
-    
 }
+
+void Speed::p1Menu(int choice) {
+    switch (choice) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4: {
+            Card temp = p1->choose(choice);
+            int centChos;
+            std::cout << "Which pile?\n";
+            std::cin>>centChos;
+            if (centChos == 1) {
+                center1.update(temp);
+            }
+            else if (centChos == 2) {
+                center2.update(temp);
+            }
+            break;
+        }
+        case 5: {
+            center2.flipAdd(p1->flip());
+            center1.flipAdd(cpu->flip());
+            break;
+        }
+    }
+}
+

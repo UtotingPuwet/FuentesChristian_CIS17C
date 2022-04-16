@@ -38,9 +38,20 @@ public:
     
     //Friend so that it can access private parts but also operator overload the cout objec
     friend std::ostream &operator<<(std::ostream &os, const Card &a);
+    
     bool operator == (const Card& a) const {return this->val == a.val && this->suit == a.suit;};
     bool operator != (const Card& a) const {return !operator==(a);};
+    
+    
+    friend int operator+(const Card & a, int i) {
+        return i + a.val;
+    }
+    friend int operator-(const Card & a, int i) {
+        return i - a.val;
+    }
+    
 };
 
+//Must be outside of class to implement operator overloading
 #endif /* CARD_H */
 

@@ -17,6 +17,7 @@
 #include "DrawCrd.h"
 #include "Hand.h"
 #include "FliPile.h"
+#include "CntPile.h"
 
 class Cpu {
     private:
@@ -32,9 +33,10 @@ class Cpu {
         bool didWin();
         bool isEmpty();
         void clear();
+        void draw();
         
-        //how the AI will choose their decision: to flip pile, place a card, which card, etc
-        void choose();
+        //AI will see if they can place a card.
+        bool choose(CntPile &, CntPile &);
         
 };
 

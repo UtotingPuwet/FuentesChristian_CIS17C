@@ -42,3 +42,35 @@ void Cpu::clear() {
     this->pile.clear();
 }
 
+void Cpu::draw() {
+    if (drawDek.isEmpty()) {
+        return;
+    }
+    else {
+        this->hand.addTo(drawDek);
+    }
+}
+
+
+
+bool Cpu::choose(CntPile &center1, CntPile &center2) {
+    bool didPlac = false;
+    for (int i = 0; i < hand.getSize(); i++) {
+        if (hand.get(i).getVal() == center1.front() + 1 || hand.get(i).getVal() == center1.front() -1) {
+            this->place(hand.get(i));
+            center1.update(hand.get(i));
+            this->draw();
+            didPlac = true;
+            return didPlac;
+        }
+        else if (hand.get(i).getVal() == center2.front() + 1 || hand.get(i).getVal() == center2.front() -1){
+            this->place(hand.get(i));
+            center2.update(hand.get(i));
+            this->draw();
+            didPlac = true;
+            return didPlac;
+        }
+    }
+    return didPlac;
+}
+

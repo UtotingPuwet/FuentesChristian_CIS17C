@@ -29,6 +29,7 @@ public:
     void init(Card);
     Card front();
     void flipAdd(Card);     //putting a flipped card to the top of center
+    int topVal();
 };
 
 
